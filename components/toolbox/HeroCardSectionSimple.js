@@ -3,15 +3,7 @@ import gumletLoader from "@/components/new-index/gumletLoader";
 import Link from "next/link";
 import Button from "@/components/Primitives/Button";
 
-/**
- * HeroCardSection
- * this one is rounded at the top only
- * so it connects with the next card
- *
- * also has no border/shadow and no button
- * @param {*} param0
- * @returns
- */
+
 const HeroCardSection = ({ post, tags, featuredImage, user }) => {
   return (
     <div
@@ -28,7 +20,7 @@ const HeroCardSection = ({ post, tags, featuredImage, user }) => {
             objectFit="cover"
             loading="eager"
             placeholder="blur"
-            blurDataURL={post?.attributes?.base64}
+            blurDataURL={""}
             priority={true}
             // loader={gumletLoader}
             key={featuredImage}
@@ -49,8 +41,6 @@ const HeroCardSection = ({ post, tags, featuredImage, user }) => {
                       <Image
                         key={post?.attributes?.logo}
                         loader={gumletLoader}
-                        placeholder="blur"
-                        blurDataURL={post?.attributes?.logoBase64}
                         // priority={true}
                         // data-priority={true}
                         // fetchpriority={true}
@@ -121,7 +111,7 @@ const HeroCardSection = ({ post, tags, featuredImage, user }) => {
                               Is it yours?{" "}
                               <Link
                                 className="underline"
-                                href={`/toolbox/post/${post.id}/claim`}
+                                href={`/toolbox/post/1/claim`}
                               >
                                 Claim page
                               </Link>
@@ -129,21 +119,13 @@ const HeroCardSection = ({ post, tags, featuredImage, user }) => {
                             </div>
                             <div className="ml-2 text-white flex flex-col-reverse">
                               <div className="flex flex-row flex-wrap gap-2">
-                                {tags.map((tag, i) => {
-                                  if (i < 4) {
-                                    return (
-                                      <Link
-                                        href={`/toolbox/${tag.attributes.slug}/page/1/`}
-                                      >
-                                        <button
-                                          className={` h-5 ${i<2?'flex':'hidden md:flex'} flex-col justify-center capitalize font-medium px-1.5 tracking-tight cursor-pointer bg-[#e0e4ea] hover:bg-gray-300 hover:text-black transition transition-all duration-400 rounded-full  text-black/50 text-[12px] font-base`}
-                                        >
-                                          {tag.attributes.name}
-                                        </button>
-                                      </Link>
-                                    );
-                                  }
-                                })}
+                                <Link href={`/toolbox/page/1/`}>
+                                  <button
+                                    className={` h-5 hidden md:flex flex-col justify-center capitalize font-medium px-1.5 tracking-tight cursor-pointer bg-[#e0e4ea] hover:bg-gray-300 hover:text-black transition transition-all duration-400 rounded-full  text-black/50 text-[12px] font-base`}
+                                  >
+                                    {"tag.attributes.name"}
+                                  </button>
+                                </Link>
                               </div>
                             </div>
                           </div>

@@ -23,7 +23,7 @@ const ImageDialog = dynamic(
   { ssr: false }
 );
 
-const EmblaCarousel = props => {
+const EmblaCarousel = (props) => {
   const { slides, options } = props;
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [emblaMainRef, emblaMainApi] = useEmblaCarousel(options);
@@ -33,7 +33,7 @@ const EmblaCarousel = props => {
   });
 
   const onThumbClick = useCallback(
-    index => {
+    (index) => {
       if (!emblaMainApi || !emblaThumbsApi) return;
       emblaMainApi.scrollTo(index);
     },
@@ -75,7 +75,7 @@ const EmblaCarousel = props => {
     }
   };
 
-  const navigateDialog = direction => {
+  const navigateDialog = (direction) => {
     if (direction == "prev") {
       let prevSlide = slides[selectedIndex - 1];
       if (prevSlide) {
@@ -139,8 +139,8 @@ const EmblaCarousel = props => {
                     setCurrentImage(item.original);
                     setDialogOpenImage(item.original);
                   }}
-                  placeholder={item.base64?"blur":"empty"}
-                  blurDataURL={item.base64?item.base64:""}
+                  placeholder={item.base64 ? "blur" : "empty"}
+                  blurDataURL={item.base64 ? item.base64 : ""}
                   loader={gumletLoader}
                   // layout="fill"
                   width={300}
