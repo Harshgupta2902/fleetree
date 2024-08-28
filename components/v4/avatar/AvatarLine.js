@@ -40,9 +40,13 @@ const AvatarLine = ({ size, author, src, date }) => {
           )}
 
           {/* dot */}
-          <div className="px-1 text-sm my-auto text-gray-500 font-bold hidden md:inline-block">·</div>
+          <div className="px-1 text-sm my-auto text-gray-500 font-bold hidden md:inline-block">
+            ·
+          </div>
           {/* date */}
-          <p className={`md:line-clamp-1 my-auto text-gray-500 ${dateClass} hidden md:inline-block`}>
+          <p
+            className={`md:line-clamp-1 my-auto text-gray-500 ${dateClass} hidden md:inline-block`}
+          >
             <Moment
               className={`text-xs text-gray-500 my-auto`}
               date={date}

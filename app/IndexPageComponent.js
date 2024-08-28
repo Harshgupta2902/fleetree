@@ -1,5 +1,5 @@
 "use client";
-import Layout from "@/components/new-index/layoutForIndex";
+import Layout from "@/components/loader/layoutForIndex";
 import IntroBanner from "@/components/v4/hero/IntroBanner2";
 import TagsNavRow from "@/components/v4/section/TagsNavRow";
 import Container from "@/components/container";

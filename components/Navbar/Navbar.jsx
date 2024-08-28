@@ -1,10 +1,5 @@
 import useUser from "@/lib/iron-session/useUser";
 import Link from "next/link";
-import LocationMenu from "@/components/Navbar/parts/LocationMenu";
-import {
-  NavigationMenu,
-  NavigationMenuList,
-} from "@/components/Primitives/Navigation";
 import { useEffect, useRef, useState } from "react";
 import SearchModal from "../SearchModal";
 import { getScrollPercent } from "../StickyFooterCTA";
@@ -134,24 +129,9 @@ const Navbar = ({
                   blinkyOn ? "animate-pulse" : "opacity-0"
                 } h-[28px] bg-gray-500/70 w-[2px]`}
               ></div>
-              
             </div>
             <div className="">
-                <SearchModal />
-              </div>
-            <div
-              className={`items-center sm:static sm:inset-auto flex mr-[52px] sm:mr-16`}
-            >
-              <NavigationMenu>
-                <NavigationMenuList>
-                  <LocationMenu
-                    user={user}
-                    hideLocaleSwitcher={hideLocaleSwitcher}
-                    collapsed={collapsed}
-                    showWriteButton={showWriteButton}
-                  />
-                </NavigationMenuList>
-              </NavigationMenu>
+              <SearchModal />
             </div>
           </div>
         </div>
