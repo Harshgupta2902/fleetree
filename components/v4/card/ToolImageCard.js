@@ -88,7 +88,7 @@ const ToolImageCard = () => {
 
         return (
           <div key={i}>
-            <Link href={`/toolbox/${slug}`}>
+            <Link href={`/packages/${slug}`}>
               <div className="flex flex-col pt-3 pb-1 grid grid-col-1 gap-4 flex-grow h-full rounded-t-2xl shadow-sm hover:shadow-xl border border-gray-300/60 transition transition-all duration-400 hover:scale-[1.02] group bg-white relative rounded-2xl fade-">
                 <div className="rounded-xl px-3 block cursor-pointer">
                   <div

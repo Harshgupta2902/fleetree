@@ -30,8 +30,9 @@ const ToolboxIndexPage = ({
 
   return (
     <>
-      {title == "All tools" ? (
-        <ToolBoxHeroWithSignup user={user} />
+      <ToolBoxHeroWithSignup />
+      {/* {title == "All tools" ? (
+        
       ) : (
         <Container maxWidth="relative mb-6 px-0" padding={false}>
           <div className="relative bg-white shadow-sm rounded-b-[3.4rem] -mt-[96px] pt-[86px] md:pt-[96px] pb-20 overflow-hidden px-1 xs:px-3 sm:px-6">
@@ -48,8 +49,7 @@ const ToolboxIndexPage = ({
             className="rounded-b-[3.4rem] opacity absolute w-full h-full object-cover top-0 left-0"
           />
         </Container>
-      )}
-      {/* {title} */}
+      )} */}
 
       <Container
         padding={false}

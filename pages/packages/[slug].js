@@ -19,16 +19,8 @@ const ToolContent = ({
   gallery,
   relatedPosts,
   popularTags,
-  layout,
-  logo,
-  logoBase64,
-  featuredImage,
-  base64,
   date,
   authorAvatar,
-  updatedAtDate,
-  navSponsor,
-  sponsors,
 }) => {
   return (
     <>
@@ -139,15 +131,6 @@ const ToolContent = ({
                       slug={"post.attributes.slug"}
                     />
                   </div>
-                </div>
-
-                <div className="mt-4">
-                  {/* <ToolBackgroundCard
-                    showAdTag={true}
-                    height={"h-[220px] md:h-[310px] xl:h-[190px]"}
-                    withBackground={true}
-                    post={navSponsor}
-                  /> */}
                 </div>
 
                 <div className="flex flex-col gap-4 mt-4 rounded-2xl bg-[#f4f4f4]/60">
