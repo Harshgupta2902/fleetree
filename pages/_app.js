@@ -14,12 +14,6 @@ const TopProgressBar = dynamic(
   },
   { ssr: false }
 );
-const AppToaster = dynamic(
-  () => {
-    return import("@/components/AppToaster");
-  },
-  { ssr: false }
-);
 
 import "../styles/index.scss";
 import "../styles/toolStyles.css";
@@ -56,7 +50,6 @@ function App({ Component, pageProps: { session, ...pageProps } }) {
             </div>
           </SessionProvider>
         </SWRConfig>
-        <AppToaster />
       </>
     </IntlProvider>
   );

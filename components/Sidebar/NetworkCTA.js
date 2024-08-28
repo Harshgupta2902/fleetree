@@ -3,7 +3,6 @@ import Link from "next/link";
 const PrototyprNetworkCTA = ({ data }) => {
   return (
     <div className="relative">
-
       <div className="flex flex-col gap-1 justify-end items-end">
         <div className="w-full rounded-2xl h-auto bg-white border border-black/5 p-6 flex flex-col grid gap-3 shadow-sm">
           <div className="flex flex-col grid gap-2">
