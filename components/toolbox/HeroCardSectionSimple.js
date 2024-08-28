@@ -3,7 +3,6 @@ import gumletLoader from "@/components/new-index/gumletLoader";
 import Link from "next/link";
 import Button from "@/components/Primitives/Button";
 
-
 const HeroCardSection = ({ post, tags, featuredImage, user }) => {
   return (
     <div
@@ -19,18 +18,14 @@ const HeroCardSection = ({ post, tags, featuredImage, user }) => {
             height={400}
             objectFit="cover"
             loading="eager"
-            placeholder="blur"
-            blurDataURL={""}
             priority={true}
             // loader={gumletLoader}
             key={featuredImage}
             src={featuredImage}
           />
         ) : null}
-        {/* <div className="absolute bottom-0 h-[250px] w-full bg-gradient-to-b from-gray-900/0 via-black/30 to-black/50 left-0 rounded-t-2xl z-0" /> */}
       </div>
       <div className="relative p-3 w-full max-w-[1320px] mx-auto">
-        {/* <div style={{pointerEvents:'none'}} className="bg-black pointer-none opacity-[20%] w-full h-full absolute left-0 top-0"/> */}
         <div className="w-full z-10 grid grid-cols-12 lg:gap-8 flex pt-0 md:pt-4 p-4  justify-between ">
           <div className="flex order-2 md:order-1 col-span-12 w-full flex-col justify-between">
             <div className="flex flex-col justify-between">
@@ -41,15 +36,14 @@ const HeroCardSection = ({ post, tags, featuredImage, user }) => {
                       <Image
                         key={post?.attributes?.logo}
                         loader={gumletLoader}
-                        // priority={true}
-                        // data-priority={true}
-                        // fetchpriority={true}
                         data-gmlazy={false}
                         width="100"
                         height="100"
                         alt="Brand logo for external website's link"
                         className="rounded-xl h-full w-full object-cover bg-white"
-                        src={post?.attributes?.logo}
+                        src={
+                          "https://prototyprio.gumlet.io/strapi/b1f1098f2ac161fab1ef44ba445902d4.png"
+                        }
                       />
                     </div>
 

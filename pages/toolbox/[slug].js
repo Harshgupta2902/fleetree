@@ -84,15 +84,6 @@ const ToolContent = ({
   return (
     <>
       <div className="w-full mx-auto">
-        {/* <Container
-          padding={false}
-          maxWidth="w-full xl:mb-3 -mt-[96px] p-6 md:px-3 xl:p-0 relative z-0"
-        >
-          <div className="grid grid-cols-12 gap-3 md:px-0 h-full w-full mx-auto max-w-[1320px] mt-[44px] lg:mt-[76px]">
-            <HeroCard logo={logo} post={post} tags={tags} featuredImage={featuredImage} />
-          </div>
-        </Container> */}
-        {/* Content under header */}
         <Container maxWidth="w-full z-10">
           <div className="grid grid-cols-3 lg:grid-cols-12 gap-3 xl:gap-7 max-w-[1320px] mx-auto md:px-0 h-full">
             <div className="hidden sticky top-6 h-fit lg:col-span-1 lg:block">
@@ -100,18 +91,13 @@ const ToolContent = ({
             </div>
             <div className="col-span-3 border border-gray-300/60 rounded-2xl overflow-hidden lg:col-span-8 flex flex-col gap-3 bg-white lg:h-fit">
               <div className="grid gap-3 md:px-0 -mb-4">
-                <HeroCardSection post={post} featuredImage={featuredImage} />
+                <HeroCardSection post={post} featuredImage={"https://prototyprio.gumlet.io/strapi/b1f1098f2ac161fab1ef44ba445902d4.png"} />
               </div>
               <div
-                // className={`relative lg:bg-gradient-to-b backdrop-blur-sm from-black via-white to-white -mt-3 z-20 py-6 pt-0 lg:pt-5 col-span-3 order-2 pl-6 lg:order-1 ${gallery?.length ? "" : ""}`}
                 className={`relative mt-1 mb-3 z-20 pt-0 col-span-3 order-2 mx-4 lg:order-1 ${
                   gallery?.length ? "" : ""
                 }`}
               >
-                {/* <div className="hidden lg:block h-full w-full -mt-5 bg-gradient-to-b from-white/[0.01] to-white/[0.3] absolute left-0" /> */}
-                <div className="h-full min-h-[240px]">
-                  {/* <Carousel gallery={gallery} /> */}
-                </div>
               </div>
               <div
                 className={`order-1 col-span-3 lg:order-3 bg-white p-6 lg:pt-0 lg:pb-12 rounded-2xl flex justify-between`}
