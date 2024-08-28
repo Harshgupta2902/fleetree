@@ -1,21 +1,8 @@
-import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
-// import Button from "@/components/Primitives/Button";
 import Link from "next/link";
-import ErrorPage from "next/error";
-// import Image from "next/image";
 import Container from "@/components/container";
 import Layout from "@/components/new-index/layoutForIndex";
-import isoToReadableDate from "@/lib/utils/isoToReadableDate";
-// import stc from "string-to-color";
-// import { ToolBoxDisplay } from "../../components/toolbox/ToolboxGrid";
-import useUser from "@/lib/iron-session/useUser";
-// import { SealQuestion } from "@phosphor-icons/react";
-// import { SocialShareVertical, SocialShare } from "@/components/SocialShare";
 import SocialShare from "@/components/SocialShare";
-
-import Carousel from "@/components/carousel";
 const StickyFooterCTA = dynamic(() => import("@/components/StickyFooterCTA"), {
   ssr: false,
 });
