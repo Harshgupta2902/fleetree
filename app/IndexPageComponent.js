@@ -24,7 +24,6 @@ export default async function IndexPageComponent({locale,user, data}) {
      {!user && <IntroBanner sponsor={data.sponsors?.length ? data.sponsors[0] : null} />}
       <TagsNavRow />
       <Container>
-        {/* Your main content here, using data fetched above */}
         <NewsColumn
           groupedNewsPosts={data.groupedNewsPosts}
           sponsor={data.navSponsor}
@@ -41,7 +40,6 @@ export default async function IndexPageComponent({locale,user, data}) {
         toolsList={data.allTools}
         sponsors={data.sponsors}
       />
-      {/* ... other sections ... */}
       <Footer />
     </>
     </IntlProvider>
