@@ -1,5 +1,4 @@
 import Container  from "@/components/container"
-import SignupHomepage from "@/components/newsletter/SignupHomepage"
 
 const NewsletterSection = ({title,padding}) =>{
 
@@ -14,7 +13,6 @@ const NewsletterSection = ({title,padding}) =>{
                     Get hand-picked stories <div className="text-underline inline">every week</div>
                 </>}</h3>
                 <p className=" mb-4 text-base text-gray-900 text-opacity-80">Join <span className="text-black/80 font-semibold">25,000+ creatives</span> who enjoy a regular dose of inspiration and motivation, delivered to your inbox every week.</p>
-                <SignupHomepage/>
             </div>
             <div style={{backgroundPosition:'10px 10px'}} className="absolute w-full h-full rounded-3xl bg-[url('/static/images/toolbox/gridsquare.svg')] absolute inset-0 [mask-image:linear-gradient(0deg,#eef2ff,rgba(238,242,255,0.8))]"/>
             {/* <img src='/static/images/toolbox/white-grid-opacity-1.svg' className="rounded-3xl invert-1 opacity absolute w-full h-full object-cover opacity-50 top-0 left-0"/> */}

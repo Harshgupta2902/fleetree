@@ -1,22 +1,14 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import {
-  NavigationMenuItem,
-} from "@/components/Primitives/Navigation";
-
-const LocaleSwitcher = dynamic(() => import("../../Locale/LocaleSwitcher"), {
-  ssr: true,
-});
+import { NavigationMenuItem } from "@/components/Primitives/Navigation";
 
 import { useIntl } from "react-intl";
 import NewPostDialog from "./NewPostDialog";
 import NotificationButton from "./NotificationButton";
 
 export const LocationMenu = ({
-  collapsed,
   user,
-  hideLocaleSwitcher,
   editor,
   showWriteButton,
   sessionUser,
@@ -26,16 +18,10 @@ export const LocationMenu = ({
 
   return (
     <>
-      {/* {!hideLocaleSwitcher && <LocaleSwitcher showWriteButton={showWriteButton} collapsed={collapsed} />} */}
-
       {(!user || !user?.isLoggedIn) && !sessionUser ? (
         <NavigationMenuItem
           className={`hidden md:block md:flex md:flex-col md:justify-center`}
-        >
-          {/* {!hideLocaleSwitcher &&  <NavigationMenuLink href="/post/write-for-us">
-            {title3}
-          </NavigationMenuLink>} */}
-        </NavigationMenuItem>
+        ></NavigationMenuItem>
       ) : (
         (user || sessionUser) &&
         !editor &&
@@ -53,7 +39,7 @@ export const LocationMenu = ({
           </NavigationMenuItem>
         )
       )}
-     <NotificationButton user={user}/>
+      <NotificationButton user={user} />
     </>
   );
 };
