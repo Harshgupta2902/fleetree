@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ArrowRight } from "@/components/icons";
-import { formatDate, getDomain } from "pages/news/[slug]";
 
 const NewsColumn = ({
   posts,
@@ -15,7 +14,7 @@ const NewsColumn = ({
 }) => {
   const renderPosts = posts =>
     posts.map((post, index) => {
-      const postDomain = getDomain(post?.attributes?.legacyAttributes?.link);
+      const postDomain = post?.attributes?.legacyAttributes?.link;
 
       // const ogImage = post?.attributes?.seo?.opengraphImage
       //   ? post?.attributes?.seo?.opengraphImage
@@ -72,7 +71,6 @@ const NewsColumn = ({
                     <span className="h-2 w-2 rounded-full rounded-full bg-gray-200 -ml-1" />
                   </span>
                   <div className="text-[12px] font-medium my-auto font-base text-gray-600">
-                    {formatDate(post?.attributes?.date)}
                   </div>
                 </div>
               </div>

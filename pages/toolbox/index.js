@@ -5,8 +5,6 @@ import ALL_SLUGS_GROUPS from "@/lib/menus/allTools";
 import Footer from "@/components/footer";
 
 export default function ToolboxPage({}) {
-  //pagination is like {"total":1421,"pageSize":12,"page":2,"pageCount":119}
-
   return (
     <>
       <Layout
@@ -16,7 +14,6 @@ export default function ToolboxPage({}) {
           title: `Prototypr Toolbox - new design, UX and coding tools | Page ${"1"}`,
           description:
             "Today's Latest Design Tools. Find illustrations, icons, UI Kits and more.",
-          //   image: "",
           canonical: `https://prototypr.io/toolbox/${"1"}`,
           url: `https://prototypr.io/toolbox/${"1"}`,
         }}
