@@ -1,7 +1,6 @@
 import { MotionSlider } from "@/components/toolbox/ToolboxCarouselAnimation";
 import { SearchBarToolbox } from "@/components/toolbox/toolboxSearchBox";
 import Link from "next/link";
-import SignupHorizontal from "../newsletter/SignupHorizontal";
 
 export const MotionSliderToolCard = ({
   title,
@@ -159,7 +158,7 @@ const ToolBoxHeroWithSignup = ({  }) => {
                   workflow with the latest tools, news and design resources.
                 </div>
                 <div className="mt-12 mb-2">
-                  <SignupHorizontal
+                  <
                     showNoSpam={true}
                     className="sm:flex justify-center mx-auto w-full px-6 lg:px-0 lg:w-[505px] mb-6"
                   />

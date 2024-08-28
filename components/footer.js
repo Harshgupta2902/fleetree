@@ -1,11 +1,5 @@
 import Container from "./container";
-import Link from "next/link";
 import { useIntl } from "react-intl";
-import dynamic from "next/dynamic";
-const SignupHorizontal = dynamic(
-  () => import("@/components/newsletter/SignupHorizontal"),
-  { ssr: true }
-);
 
 export default function Footer() {
   const intl = useIntl();
@@ -23,46 +17,11 @@ export default function Footer() {
               <p className="text-base mt-0 text-gray-700">
                 {intl.formatMessage({ id: "footer.subtitle" })} 💌
               </p>
-
-              <SignupHorizontal className="sm:flex w-11/12 mt-5 mb-6" />
-              {/* <HookForm onSubmit={onSubmit} buttonText={buttonText} /> */}
-              {/* <p className="text-sm mt-6 text-gray-800 font-semibold">
-                {intl.formatMessage({ id: "footer.author1" })}{" "}
-                <a
-                  className="text-blue-800 underline"
-                  href="https://twitter.com/annchichii"
-                >
-                  Ann
-                </a>
-                ,{" "}
-                <a
-                  className="text-blue-800 underline"
-                  href="https://twitter.com/graeme_fulton"
-                >
-                  Graeme
-                </a>
-                , {intl.formatMessage({ id: "footer.author2" })}{" "}
-                <a
-                  className="text-blue-800 underline"
-                  href="https://twitter.com/iamsofiamm"
-                >
-                  Sofia
-                </a>
-                . {intl.formatMessage({ id: "footer.author3" })}{" "}
-                <a
-                  className="text-blue-800 underline"
-                  href="https://twitter.com/thisismimiespi"
-                >
-                  Mimi
-                </a>
-                .
-              </p> */}
               <p className="text-sm text-gray-700 font-semibold mt-2">
                 {" "}
                 © 2024 Prototypr,{" "}
                 {intl.formatMessage({ id: "footer.copyright" })}
               </p>
-              
             </div>
 
             <div className="w-full md:w-6/12">
@@ -94,9 +53,13 @@ export default function Footer() {
                     </li>
                     <li>
                       {/* <Link href="/posts" as="/posts"> */}
-                        <a href="https://open.prototypr.io" target="_blank" className="text-gray-700 hover:text-gray-900 font-base block py-3 text-base">
-                          {intl.formatMessage({ id: "footer.rightCat3" })}
-                        </a>
+                      <a
+                        href="https://open.prototypr.io"
+                        target="_blank"
+                        className="text-gray-700 hover:text-gray-900 font-base block py-3 text-base"
+                      >
+                        {intl.formatMessage({ id: "footer.rightCat3" })}
+                      </a>
                       {/* </Link> */}
                     </li>
                     <li>
@@ -126,7 +89,7 @@ export default function Footer() {
                     {intl.formatMessage({ id: "footer.otherResource" })}
                   </span>
                   <ul className="list-unstyled">
-                  <li>
+                    <li>
                       <a
                         className="text-gray-700 hover:text-gray-900 font-base block py-3 text-base"
                         rel="noreferrer"

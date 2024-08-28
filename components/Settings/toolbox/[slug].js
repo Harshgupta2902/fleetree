@@ -49,8 +49,6 @@ import SectionDivider from "@/components/v4/section/SectionDivider";
 import { TOTAL_STATIC_POSTS } from "@/lib/constants";
 import ToolLargeCardRow from "@/components/v4/layout/ToolLargeCardRow";
 import AuthorCard from "@/components/toolbox/AuthorCard";
-import SignupSidebar from "@/components/newsletter/SignupSidebar";
-// import ToolCard from "@/components/v4/card/ToolCard";
 // import WeeMan from "@/components/images/weeMan";
 import buildToolboxGallery, {
   getToolboxFeaturedImage,
@@ -402,9 +400,6 @@ const ToolContent = ({
                       "https://prototypr-media.sfo2.digitaloceanspaces.com/strapi/7432cc558c73394df5d2c21a3ee18cd5.png?updated_at=2022-12-14T17:59:46.805Z"
                     }
                   /> */}
-                  <div className="col-span-12 relative z-10">
-                    <SignupSidebar post={post} />
-                  </div>
                 </div>
               </div>
             </div>

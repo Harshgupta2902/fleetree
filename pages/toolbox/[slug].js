@@ -12,7 +12,6 @@ import PopularTagsSection from "@/components/v4/section/PopularTagsSection";
 import SectionDivider from "@/components/v4/section/SectionDivider";
 import ToolLargeCardRow from "@/components/v4/layout/ToolLargeCardRow";
 import AuthorCard from "@/components/toolbox/AuthorCard";
-import SignupSidebar from "@/components/newsletter/SignupSidebar";
 import ToolIconCard from "@/components/v4/card/ToolIconCard";
 import HeroCardSection from "@/components/toolbox/HeroCardSectionSimple";
 import LikeButton from "@/components/LikeButton";
@@ -195,9 +194,7 @@ const ToolContent = ({
                     </p>
                   </div>
 
-                  <div className="col-span-12 relative z-10">
-                    <SignupSidebar post={post} />
-                  </div>
+                  <div className="col-span-12 relative z-10"></div>
                 </div>
               </div>
             </div>

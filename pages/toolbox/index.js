@@ -1,5 +1,4 @@
 import Layout from "@/components/new-index/layoutForIndex";
-
 import ToolboxIndexPage from "@/components/toolbox/ToolboxIndexPage";
 import ALL_SLUGS_GROUPS from "@/lib/menus/allTools";
 import Footer from "@/components/footer";
