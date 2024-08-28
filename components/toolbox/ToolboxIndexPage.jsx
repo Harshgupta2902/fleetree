@@ -14,10 +14,8 @@ const FilterCategory = dynamic(() => import("@/components/FilterCategory"));
 
 const ToolboxIndexPage = ({
   title,
-  description,
   pagination,
   urlRoot,
-  breadcrumbs,
   allPosts,
   pageSize,
   filterCategories,
@@ -25,7 +23,6 @@ const ToolboxIndexPage = ({
   paginationRoot,
   navSponsor,
   sponsor,
-  color,
 }) => {
   const router = useRouter();
   const { user } = useUser({
@@ -113,7 +110,6 @@ const Sidebar = ({
   title,
 }) => {
   return (
-    // <div className="hidden md:block h-[fit-content] relative col-span-2 bg-white rounded-2xl shadow-sm border border-gray-300/60 p-6">
     <div
       className={`${
         title !== "All tools" ? "mt-6" : ""

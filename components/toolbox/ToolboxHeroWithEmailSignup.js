@@ -12,7 +12,9 @@ export const MotionSliderToolCard = ({
 }) => {
   return (
     <div
-      className={`w-[400px] h-[fit-content] cursor-collab-blue relative rounded-2xl shadow-sm border border-1 border-gray-200/70 ${sponsored ? "bg-white" : "bg-white"} grid grid-items-center p-2 hover:scale-105 hover:shadow-xl transition transition-all duration-400`}
+      className={`w-[400px] h-[fit-content] cursor-collab-blue relative rounded-2xl shadow-sm border border-1 border-gray-200/70 ${
+        sponsored ? "bg-white" : "bg-white"
+      } grid grid-items-center p-2 hover:scale-105 hover:shadow-xl transition transition-all duration-400`}
     >
       <Link
         target={sponsored ? "_blank" : "_self"}
@@ -117,7 +119,7 @@ const ProductListData2 = [
   },
 ];
 
-const ToolBoxHeroWithSignup = ({  }) => {
+const ToolBoxHeroWithSignup = ({}) => {
   return (
     <div className="w-full h-full bg-[#fbfcff] relative pt-20 pb-3 -mt-[96px] mb-10">
       <div
@@ -136,17 +138,18 @@ const ToolBoxHeroWithSignup = ({  }) => {
               />
             </div> */}
             {/* {user?.isLoggedIn ? ( */}
-              <div>
-                {/* <h1 className="text-[40px] md:text-5xl text-center font-bold mb-2">
+            <div>
+              {/* <h1 className="text-[40px] md:text-5xl text-center font-bold mb-2">
                 Find your <span className="">next tool</span>
                 </h1> */}
-                <h1 className="text-[40px] md:text-5xl text-center tracking-tight font-bold mb-2">
-                  Find the tool, <br/> make <span className="text-underline">your thing</span>.
-                </h1>
-                <div className="w-full my-8 flex justify-center">
-                  <SearchBarToolbox />
-                </div>
+              <h1 className="text-[40px] md:text-5xl text-center tracking-tight font-bold mb-2">
+                Find the tool, <br /> make{" "}
+                <span className="text-underline">your thing</span>.
+              </h1>
+              <div className="w-full my-8 flex justify-center">
+                <SearchBarToolbox />
               </div>
+            </div>
             {/* ) : (
               <div>
                 <h1 className="text-[40px] md:text-5xl text-center font-bold mb-2">
