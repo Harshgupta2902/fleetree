@@ -9,8 +9,6 @@ const StickyFooterCTA = dynamic(() => import("@/components/StickyFooterCTA"), {
 import Footer from "@/components/footer";
 import NewsletterSection from "@/components/v4/section/NewsletterSection";
 import PopularTagsSection from "@/components/v4/section/PopularTagsSection";
-import SectionDivider from "@/components/v4/section/SectionDivider";
-import ToolLargeCardRow from "@/components/v4/layout/ToolLargeCardRow";
 import AuthorCard from "@/components/toolbox/AuthorCard";
 import ToolIconCard from "@/components/v4/card/ToolIconCard";
 import HeroCardSection from "@/components/toolbox/HeroCardSectionSimple";
@@ -200,42 +198,10 @@ const ToolContent = ({
             </div>
           </div>
         </Container>
-        <Container maxWidth="w-full relative z-10">
-          <div className="max-w-[1320px] mx-auto grid grid-cols-12 gap-4 md:px-0 h-full">
-            <SectionDivider py="py-3" transparentLine={true} />
-          </div>
-          <Container maxWidth="max-w-[1320px]">
-            <div
-              className={`pb-0 border-l-[0.19rem] border-b-[0.18rem] border-sky-500 opacity-10 rounded-bl-xl pt-6`}
-            >
-              {/* <div className={` bg-opacity-[0.08] bg-sky-500 h-[3px] w-full pl-3`} /> */}
-            </div>
-          </Container>
-        </Container>
       </div>
+      <br />
+      <br />
 
-      <Container maxWidth="hidden xl:block w-full pb-24 bg-gradient-to-tr from-[#fefefe] to-sky-100/20 relative z-10">
-        {/* <img src="/static/images/bendy9.svg" className="absolute top-0 -mt-[2.9%] z-10 left-0 w-full gm-added gm-observing gm-observing-cb" loading="lazy"/> */}
-        {relatedPosts?.length ? (
-          <div className="z-30 relative max-w-[1320px] mx-auto md:px-3">
-            <div classsName="flex flex-col px-3 z-30">
-              <h3 className="text-2xl pt-12 mb-6 text-black/90 font-medium  max-w-md tracking-tight">
-                Related tools
-              </h3>
-              {/* <ToolLargeCardRow title={`Related to ${post?.attributes?.title}`} tools={relatedPosts.slice(0,4)} /> */}
-              <ToolLargeCardRow
-                preload={false}
-                showTitle={false}
-                tools={relatedPosts.slice(0, 4)}
-              />
-            </div>
-            <img
-              src="/static/images/toolbox/squares2.svg"
-              className="w-full h-[128%] absolute object-cover opacity-20"
-            />
-          </div>
-        ) : null}
-      </Container>
       <Container maxWidth="w-full pb-16 bg-[#fefefe] relative z-10 pt-0">
         <div className="max-w-[1320px] pt-0 -mt-8 mb-8 mx-auto h-full">
           <div className="mb-20">
