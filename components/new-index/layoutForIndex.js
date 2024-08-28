@@ -1,5 +1,4 @@
 "use client";
-import { NAV_OFFSET } from "@/lib/constants";
 import Meta from "../meta";
 import Navbar from "@/components/Navbar/Navbar";
 export default function Layout({
@@ -25,7 +24,7 @@ export default function Layout({
       />
       <div
         className={`min-h-screen overflow-x-hidden ${
-          navOffset == false ? "" : NAV_OFFSET
+          navOffset == false ? "" : "pt-[84px]"
         } ${padding == false ? "" : "px-3 md:px-8"}`}
         style={{ background: background ? background : "#fbfcff" }}
       >

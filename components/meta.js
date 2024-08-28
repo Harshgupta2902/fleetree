@@ -1,4 +1,3 @@
-import { HOME_OG_IMAGE_URL } from "@/lib/constants";
 import { NextSeo } from "next-seo";
 export default function Meta({ seo }) {
   return (
@@ -87,7 +86,7 @@ export default function Meta({ seo }) {
           description: seo?.description
             ? seo.description
             : "'Discover UX prototyping tools for designing mobile and desktop experiences. From UX design to front end development - find the right tool for the job.",
-          images: [{ url: seo?.image ? seo.image : HOME_OG_IMAGE_URL }],
+          images: [{ url: seo?.image ? seo.image : "http://www.prototypr.io/wp-content/uploads/2020/04/Screenshot-2020-04-20-at-16.30.37.png" }],
           site_name: "Prototypr",
         }}
         twitter={{

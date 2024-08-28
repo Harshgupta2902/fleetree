@@ -1,14 +1,12 @@
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import Container from "@/components/container";
-import useUser from "@/lib/iron-session/useUser";
 import ToolImageCard from "../v4/card/ToolImageCard";
 import ToolBoxHeroWithSignup from "./ToolboxHeroWithEmailSignup";
 const StickyFooterCTA = dynamic(() => import("@/components/StickyFooterCTA"), {
   ssr: false,
 });
 
-// const MoreStories = dynamic(() => import("@/components/more-stories"));
 const NewPagination = dynamic(() => import("@/components/pagination"));
 const FilterCategory = dynamic(() => import("@/components/FilterCategory"));
 
@@ -25,9 +23,6 @@ const ToolboxIndexPage = ({
   sponsor,
 }) => {
   const router = useRouter();
-  const { user } = useUser({
-    redirectIfFound: false,
-  });
 
   const onPageNumChange = (pageNo) => {
     router.push(`/${paginationRoot}/page/${pageNo}`);

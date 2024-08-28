@@ -2,6 +2,64 @@ import { MotionSlider } from "@/components/toolbox/ToolboxCarouselAnimation";
 import { SearchBarToolbox } from "@/components/toolbox/toolboxSearchBox";
 import Link from "next/link";
 
+const ToolBoxHeroWithSignup = ({}) => {
+  return (
+    <div className="w-full h-full bg-[#fbfcff] relative pt-20 pb-3 -mt-[96px] mb-10">
+      <div
+        style={{ backgroundPosition: "10px 10px" }}
+        className="absolute w-full h-full rounded-3xl bg-[url('/static/images/toolbox/gridsquare.svg')] absolute inset-0 [mask-image:linear-gradient(0deg,rgba(251,252,255,0),#eef2ff)]"
+      />
+
+      <div className="w-full h-auto pt-12 pb-12 relative z-2">
+        <div className="max-w-7xl mx-auto grid place-items-center h-full">
+          <div className="flex flex-col justify-center items-center gap-2">
+            <div>
+              <h1 className="text-[40px] md:text-5xl text-center tracking-tight font-bold mb-2">
+                Find the tool, <br /> make{" "}
+                <span className="text-underline">your thing</span>.
+              </h1>
+              <div className="w-full my-8 flex justify-center">
+                <SearchBarToolbox />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="w-full max-w-full relative py-5 flex flex-col overflow-hidden">
+        <div className=" flex flex-col items-center max-w-7xl mx-auto grid top-0 w-full ">
+          <MotionSlider
+            initialDuration={180}
+            slides={ProductListData.map((data, i) => {
+              return (
+                <MotionSliderToolCard
+                  title={data.title}
+                  slug={data.slug}
+                  subtext={data.description}
+                  image={data.image}
+                />
+              );
+            })}
+          />
+          <MotionSlider
+            initialDuration={150}
+            slides={ProductListData2.map((data, i) => {
+              return (
+                <MotionSliderToolCard
+                  slug={data.slug}
+                  title={data.title}
+                  subtext={data.description}
+                  image={data.image}
+                />
+              );
+            })}
+          />
+        </div>
+      </div>
+      <div></div>
+    </div>
+  );
+};
+
 export const MotionSliderToolCard = ({
   title,
   subtext,
@@ -118,95 +176,5 @@ const ProductListData2 = [
       "https://prototypr-media.sfo2.digitaloceanspaces.com/wp-content/uploads/2021/06/Screenshot-2021-06-29-at-12.25.34.png?w=256&q=75&format=webp&compress=true&dpr=2",
   },
 ];
-
-const ToolBoxHeroWithSignup = ({}) => {
-  return (
-    <div className="w-full h-full bg-[#fbfcff] relative pt-20 pb-3 -mt-[96px] mb-10">
-      <div
-        style={{ backgroundPosition: "10px 10px" }}
-        className="absolute w-full h-full rounded-3xl bg-[url('/static/images/toolbox/gridsquare.svg')] absolute inset-0 [mask-image:linear-gradient(0deg,rgba(251,252,255,0),#eef2ff)]"
-      />
-
-      <div className="w-full h-auto pt-12 pb-12 relative z-2">
-        <div className="max-w-7xl mx-auto grid place-items-center h-full">
-          <div className="flex flex-col justify-center items-center gap-2">
-            {/* <div className="rounded-[16px] overflow-hidden shadow-xl">
-              <img
-                className=" w-20 h-20 bg-transparent  border-black border-opacity-10"
-                src={"/static/images/toolbox/toolbox-icon.svg"}
-                alt="Prototypr Logo"
-              />
-            </div> */}
-            {/* {user?.isLoggedIn ? ( */}
-            <div>
-              {/* <h1 className="text-[40px] md:text-5xl text-center font-bold mb-2">
-                Find your <span className="">next tool</span>
-                </h1> */}
-              <h1 className="text-[40px] md:text-5xl text-center tracking-tight font-bold mb-2">
-                Find the tool, <br /> make{" "}
-                <span className="text-underline">your thing</span>.
-              </h1>
-              <div className="w-full my-8 flex justify-center">
-                <SearchBarToolbox />
-              </div>
-            </div>
-            {/* ) : (
-              <div>
-                <h1 className="text-[40px] md:text-5xl text-center font-bold mb-2">
-                  The best tools{" "}
-                  <span className="text-underline">every week.</span>
-                </h1>
-                <div className="text-center text-gray-600 max-w-[600px] text-lg mt-3 mx-auto">
-                  Join 25k+ readers receiving Prototypr Weekly. Improve your
-                  workflow with the latest tools, news and design resources.
-                </div>
-                <div className="mt-12 mb-2">
-                  <
-                    showNoSpam={true}
-                    className="sm:flex justify-center mx-auto w-full px-6 lg:px-0 lg:w-[505px] mb-6"
-                  />
-                </div>
-              </div>
-            )} */}
-          </div>
-        </div>
-      </div>
-      <div className="w-full max-w-full relative py-5 flex flex-col overflow-hidden">
-        <div className=" flex flex-col items-center max-w-7xl mx-auto grid top-0 w-full ">
-          <MotionSlider
-            initialDuration={180}
-            slides={ProductListData.map((data, i) => {
-              return (
-                <MotionSliderToolCard
-                  title={data.title}
-                  slug={data.slug}
-                  subtext={data.description}
-                  image={data.image}
-                />
-              );
-            })}
-          />
-          <MotionSlider
-            initialDuration={150}
-            slides={ProductListData2.map((data, i) => {
-              return (
-                <MotionSliderToolCard
-                  slug={data.slug}
-                  title={data.title}
-                  subtext={data.description}
-                  image={data.image}
-                />
-              );
-            })}
-          />
-        </div>
-        {/* <Link href="/toolbox/page/1" className="mx-auto">
-          <p className="mx-auto mt-7 font-medium text-base text-gray-800 hover:text-gray-500">See tool directory →</p>
-        </Link> */}
-      </div>
-      <div></div>
-    </div>
-  );
-};
 
 export default ToolBoxHeroWithSignup;

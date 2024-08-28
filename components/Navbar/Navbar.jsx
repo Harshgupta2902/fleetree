@@ -1,27 +1,9 @@
-import useUser from "@/lib/iron-session/useUser";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import SearchModal from "../SearchModal";
 import { getScrollPercent } from "../StickyFooterCTA";
 
-const Navbar = ({
-  collapsed,
-  hideLocaleSwitcher,
-  editor,
-  sponsor,
-  showWriteButton,
-  maxWidth,
-  navType,
-  navBackground,
-}) => {
-  const { user, isLoading, isLoggedIn } = useUser({
-    redirectIfFound: false,
-  });
-
-  const [mobileNavOpen, setMobileNavOpen] = useState(false);
-  const toggleMobileNav = () => {
-    setMobileNavOpen(!mobileNavOpen);
-  };
+const Navbar = ({ maxWidth, navType }) => {
 
   const [isVisible, setVisible] = useState(false);
   const [blinkyOn, setBlinkyOn] = useState(false);
@@ -37,7 +19,6 @@ const Navbar = ({
     }, 1000);
   }, [isVisible]);
 
-  // Define the scrollListener inside useEffect or use useCallback
   useEffect(() => {
     const scrollListener = () => {
       const p = getScrollPercent(); // Assuming getScrollPercent is defined elsewhere
