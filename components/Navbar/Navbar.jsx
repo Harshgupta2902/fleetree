@@ -7,12 +7,8 @@ import {
   NavigationMenuList,
 } from "@/components/Primitives/Navigation";
 import { useEffect, useRef, useState } from "react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import MobileActiveLink from "@/components/Navbar/parts/MobileActiveLink";
 import NavSponsor from "../v4/badge/NavSponsor";
 import SearchModal from "../SearchModal";
-import MenuItems from "@/components/Navbar/parts/MenuItems";
-import NewPostDialog from "./parts/NewPostDialog";
 import { getScrollPercent } from "../StickyFooterCTA";
 
 const Navbar = ({
@@ -142,11 +138,6 @@ const Navbar = ({
               ></div>
               <div className="">
                 <SearchModal />
-              </div>
-            </div>
-            <div className="flex items-center h-9">
-              <div className="hidden sm:ml-6 lg:block">
-                <MenuItems />
               </div>
             </div>
             <div
