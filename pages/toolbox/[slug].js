@@ -6,50 +6,15 @@ import SocialShare from "@/components/SocialShare";
 const StickyFooterCTA = dynamic(() => import("@/components/StickyFooterCTA"), {
   ssr: false,
 });
-const StickyFooterInterview = dynamic(
-  () => import("@/components/StickyFooterInterview"),
-  {
-    ssr: false,
-  }
-);
-// const AuthorCard = dynamic(() => import("@/components/toolbox/AuthorCard"));
-// const SponsorCard = dynamic(() => import("@/components/toolbox/SponsorCard"));
-// const RelatedPosts = dynamic(() => import("@/components/related-posts"));
-// const VisitCard = dynamic(() => import("@/components/toolbox/VisitCard"));
-// const Contributors = dynamic(() => import("@/components/toolbox/Contributors"));
-
-import {
-  getAllPostsWithSlug,
-  getTool,
-  // getAllToolsForHomeStatic,
-  getPopularTopics,
-  getUserRelatedPostsFromId,
-} from "@/lib/api";
-// import ToolCard from "@/components/v4/card/ToolCard";
-// import BigTag from "@/components/v4/tag/BigTag";
 import Footer from "@/components/footer";
 import NewsletterSection from "@/components/v4/section/NewsletterSection";
-// import TwoColumnCards from "@/components/v4/layout/TwoColumnCardsB";
 import PopularTagsSection from "@/components/v4/section/PopularTagsSection";
 import SectionDivider from "@/components/v4/section/SectionDivider";
-
-import { TOTAL_STATIC_POSTS } from "@/lib/constants";
 import ToolLargeCardRow from "@/components/v4/layout/ToolLargeCardRow";
 import AuthorCard from "@/components/toolbox/AuthorCard";
 import SignupSidebar from "@/components/newsletter/SignupSidebar";
-// import ToolCard from "@/components/v4/card/ToolCard";
-// import WeeMan from "@/components/images/weeMan";
-import buildToolboxGallery, {
-  getToolboxFeaturedImage,
-  getToolboxLogo,
-} from "@/lib/utils/buildGallery";
-import { formatAllTools } from "@/lib/utils/formatToolContent";
 import ToolIconCard from "@/components/v4/card/ToolIconCard";
 import HeroCardSection from "@/components/toolbox/HeroCardSectionSimple";
-import { addTwitterScript } from "@/lib/addTwitterScript";
-import { createB64WithFallback } from "@/lib/utils/blurHashToDataURL";
-import getSponsors from "@/lib/utils/getSponsors";
-import ToolBackgroundCard from "@/components/v4/card/ToolBackgroundCard";
 import LikeButton from "@/components/LikeButton";
 
 const ToolContent = ({
@@ -78,14 +43,18 @@ const ToolContent = ({
             </div>
             <div className="col-span-3 border border-gray-300/60 rounded-2xl overflow-hidden lg:col-span-8 flex flex-col gap-3 bg-white lg:h-fit">
               <div className="grid gap-3 md:px-0 -mb-4">
-                <HeroCardSection post={post} featuredImage={"https://prototyprio.gumlet.io/strapi/b1f1098f2ac161fab1ef44ba445902d4.png"} />
+                <HeroCardSection
+                  post={post}
+                  featuredImage={
+                    "https://prototyprio.gumlet.io/strapi/b1f1098f2ac161fab1ef44ba445902d4.png"
+                  }
+                />
               </div>
               <div
                 className={`relative mt-1 mb-3 z-20 pt-0 col-span-3 order-2 mx-4 lg:order-1 ${
                   gallery?.length ? "" : ""
                 }`}
-              >
-              </div>
+              ></div>
               <div
                 className={`order-1 col-span-3 lg:order-3 bg-white p-6 lg:pt-0 lg:pb-12 rounded-2xl flex justify-between`}
               >
