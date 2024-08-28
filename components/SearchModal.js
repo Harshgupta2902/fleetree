@@ -1,7 +1,6 @@
 "use client";
 import "instantsearch.css/themes/algolia-min.css";
 import React, { useEffect, useState } from "react";
-import Button from "@/components/Primitives/Button";
 import { usePathname } from "next/navigation";
 import {
   InstantSearch,
@@ -37,14 +36,7 @@ const searchClient = {
   ...originalSearchClient,
 };
 
-const filter_options = [
-  { name: "All", filter: "(type=tool OR type=article)" },
-  { name: "Article", filter: "type=article" },
-  { name: "Tool", filter: "type=tool" },
-];
-
-const SearchModal = props => {
-  const [activeFilter, setActiveFilter] = useState(filter_options[0]?.filter);
+const SearchModal = (props) => {
   const [submitOpen, setSubmitOpen] = useState(null);
 
   const toggleSubmitOpen = () => {
@@ -63,8 +55,8 @@ const SearchModal = props => {
   return (
     <Dialog onOpenChange={toggleSubmitOpen} open={submitOpen}>
       <DialogTrigger asChild>
-        <div className="flex my-auto cursor-text hover:bg-blue-50 cursor-pointer ml-3 bg-gray-200/60 p-2 lg:p-0 lg:px-4 lg:pl-2 w-fit lg:w-[120px] h-[32px] rounded-full text-gray-600 text-sm">
-            <MagnifyingGlass className={'my-auto'} size={18}  weight="bold" />
+        <div className="flex my-auto cursor-text hover:bg-blue-50 cursor-pointer ml-3 bg-gray-200/60 p-2 lg:p-0 lg:px-4 lg:pl-2 w-fit lg:w-[320px] h-[32px] rounded-full text-gray-600 text-sm">
+          <MagnifyingGlass className={"my-auto "} size={18} weight="bold" />
           <div className="hidden lg:block ml-2 my-auto font-base">Search</div>
         </div>
       </DialogTrigger>
@@ -74,11 +66,6 @@ const SearchModal = props => {
           <DialogDescription>
             <div className="relative">
               <InstantSearch indexName="post" searchClient={searchClient}>
-                <Configure
-                  // analytics={false}
-                  filters={`${activeFilter}`}
-                  hitsPerPage={8}
-                />
                 <SearchBox placeholder="Search for design tools and articles" />
                 <div
                   id="meilisearch-results"
@@ -88,21 +75,6 @@ const SearchModal = props => {
                     <div className="flex flex-col justify-center">
                       <Stats />
                     </div>
-                    <select
-                      id="location"
-                      className="w-[100px]"
-                      onChange={e => {
-                        setActiveFilter(
-                          filter_options[parseInt(e.target.value, 10)]?.filter
-                        );
-                      }}
-                    >
-                      {filter_options.map((i, index) => (
-                        <option key={"filter_" + index} value={index}>
-                          {i.name}
-                        </option>
-                      ))}
-                    </select>
                   </div>
                   <div className="mt-3">
                     <InfiniteHits hitComponent={Hit} />
@@ -167,7 +139,7 @@ const SearchResultImage = ({ image, hit }) => {
   );
 };
 
-const getImage = hit => {
+const getImage = (hit) => {
   if (hit) {
     if (hit.legacyMedia?.logoNew) {
       return hit.legacyMedia?.logoNew;
@@ -185,7 +157,7 @@ const getImage = hit => {
   }
 };
 
-const getLink = hit => {
+const getLink = (hit) => {
   if (hit.type == "article") {
     return `${process.env.NEXT_PUBLIC_HOME_URL}/post/${hit.slug}`;
   }

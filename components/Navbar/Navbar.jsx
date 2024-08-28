@@ -1,5 +1,4 @@
 import useUser from "@/lib/iron-session/useUser";
-import UserMenu from "@/components/Navbar/UserMenu";
 import Link from "next/link";
 import LocationMenu from "@/components/Navbar/parts/LocationMenu";
 import {
@@ -7,7 +6,6 @@ import {
   NavigationMenuList,
 } from "@/components/Primitives/Navigation";
 import { useEffect, useRef, useState } from "react";
-import NavSponsor from "../v4/badge/NavSponsor";
 import SearchModal from "../SearchModal";
 import { getScrollPercent } from "../StickyFooterCTA";
 
@@ -136,10 +134,11 @@ const Navbar = ({
                   blinkyOn ? "animate-pulse" : "opacity-0"
                 } h-[28px] bg-gray-500/70 w-[2px]`}
               ></div>
-              <div className="">
+              
+            </div>
+            <div className="">
                 <SearchModal />
               </div>
-            </div>
             <div
               className={`items-center sm:static sm:inset-auto flex mr-[52px] sm:mr-16`}
             >
@@ -153,11 +152,6 @@ const Navbar = ({
                   />
                 </NavigationMenuList>
               </NavigationMenu>
-              <div className="relative">
-                <UserMenu userLoading={false} user={user} />
-              </div>
-              {sponsor ? <NavSponsor sponsor={sponsor} /> : null}
-              <div>&nbsp;</div>
             </div>
           </div>
         </div>
