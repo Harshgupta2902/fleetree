@@ -1,6 +1,6 @@
-import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
-import { NextSeo, ArticleJsonLd, ProductJsonLd } from "next-seo";
-export default function Meta({ seo, articleJsonLd, productJsonLd }) {
+import { HOME_OG_IMAGE_URL } from "@/lib/constants";
+import { NextSeo } from "next-seo";
+export default function Meta({ seo }) {
   return (
     <>
       <NextSeo

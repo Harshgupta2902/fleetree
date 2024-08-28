@@ -15,7 +15,13 @@ export default function NewPagination({
       maxWidth="max-w-[1320px] mx-auto "
     >
       <div
-        className={`flex ${align == "start" ? "justify-start" : align=='end'?'justify-end':"justify-center"} items-center ${total > pageSize ? "mt-8 pb-12 md:pb-4" : ""}`}
+        className={`flex ${
+          align == "start"
+            ? "justify-start"
+            : align == "end"
+            ? "justify-end"
+            : "justify-center"
+        } items-center ${total > pageSize ? "mt-8 pb-12 md:pb-4" : ""}`}
       >
         <RcPagination
           hideOnSinglePage={true}
@@ -23,7 +29,7 @@ export default function NewPagination({
           current={currentPage}
           pageSize={pageSize}
           total={total}
-          onChange={pageNum => {
+          onChange={(pageNum) => {
             onPageNumChange(pageNum);
           }}
         />
