@@ -4,7 +4,6 @@ import SearchModal from "../SearchModal";
 import { getScrollPercent } from "../StickyFooterCTA";
 
 const Navbar = ({ maxWidth, navType }) => {
-
   const [isVisible, setVisible] = useState(false);
   const [blinkyOn, setBlinkyOn] = useState(false);
   const [hideOffTop, setHideOffTop] = useState(false);
