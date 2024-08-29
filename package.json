@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "NODE_OPTIONS='--inspect' next dev",
     "dev:src": "NODE_OPTIONS='--inspect' USE_SRC_ALIAS=true next dev",
-    "build": "next build",
+    "build": "nvm use 18 && next build",
     "postbuild": "next-sitemap",
     "start": "next start",
     "switch-local": "./switch-mode.sh local",
