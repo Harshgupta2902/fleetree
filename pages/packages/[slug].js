@@ -207,13 +207,6 @@ const ToolContent = ({
         title="Welcome to Prototypr"
         description="Join today to make posts and grow with us."
       />
-      {/* <StickyFooterInterview
-        post={post}
-        title="Tell your creator story"
-        description={
-          "Get featured in the newsletter by answering a creator interview"
-        }
-      /> */}
     </>
   );
 };
